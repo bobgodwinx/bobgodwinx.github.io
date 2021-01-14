@@ -9,6 +9,7 @@
         "longitude": -4.7100,
         "heroPicture": "highlands",
         "pictures": ["photo2", "photo3", "photo4"],
+        "images": ["01_01.jpg", "01_02.jpg", "01_03.jpg", "01_04.jpg", "01_05.jpg"],
         "advisory": "We accept no liability for any visitors eaten alive by midges."
     },
     {
@@ -20,6 +21,7 @@
         "latitude": 35.6532,
         "longitude": -83.5070,
         "heroPicture": "smokies",
+        "images": ["02_01.jpg", "02_02.jpg", "02_03.jpg", "02_04.jpg", "02_05.jpg", "02_06.jpg", "02_07.jpg", "02_08.jpg"],
         "pictures": ["photo1", "photo2", "photo3", "photo4", "photo5", "photo6", "photo7", "photo8"],
         "advisory": "We accept no liability for any visitors eaten alive by bears."
     },
@@ -32,6 +34,7 @@
         "latitude": 50.8883,
         "longitude": -125.5857,
         "heroPicture": "knight-inlet",
+        "images": ["03_01.jpg", "03_02.jpg", "03_03.jpg", "03_04.jpg", "03_05.jpg", "03_06.jpg"],
         "pictures": ["photo3", "photo4", "photo5", "photo6", "photo7"],
         "advisory": ""
     },
@@ -44,6 +47,7 @@
         "latitude": -20.4264,
         "longitude": 57.4509,
         "heroPicture": "black-river-gorges",
+        "images": ["04_01.jpg", "04_02.jpg", "04_03.jpg", "04_04.jpg", "04_05.jpg", "04_06.jpg", "04_07.jpg"],
         "pictures": ["photo4", "photo5", "photo6", "photo7", "photo8"],
         "advisory": ""
     },
@@ -56,6 +60,7 @@
         "latitude": 22.3460,
         "longitude": 31.6156,
         "heroPicture": "abu-simbel",
+        "images": ["05_01.jpg", "05_02.jpg", "05_03.jpg", "05_04.jpg", "05_05.jpg", "05_06.jpg"],
         "pictures": ["photo5", "photo6", "photo7", "photo8", "photo1", "photo2", "photo3", "photo4"],
         "advisory": ""
     },
@@ -68,6 +73,7 @@
         "latitude": 45.4384,
         "longitude": 10.9916,
         "heroPicture": "verona",
+        "images": ["06_01.jpg", "06_02.jpg", "06_03.jpg", "06_04.jpg", "06_05.jpg", "06_06.jpg", "06_07.jpg", "06_08.jpg"],
         "pictures": ["photo6", "photo7", "photo8", "photo1", "photo2", "photo3", "photo4"],
         "advisory": ""
     },
@@ -80,6 +86,7 @@
         "latitude": 27.1751,
         "longitude": 78.0421,
         "heroPicture": "taj-mahal",
+        "images": ["07_01.jpg", "07_02.jpg", "07_03.jpg", "07_04.jpg"],
         "pictures": ["photo7", "photo8", "photo1", "photo2", "photo3", "photo4", "photo5", "photo6"],
         "advisory": ""
     },
@@ -92,6 +99,7 @@
         "latitude": 5.4141,
         "longitude": 100.3288,
         "heroPicture": "penang",
+        "images": ["08_01.jpg", "08_02.jpg", "08_03.jpg", "08_04.jpg"],
         "pictures": ["photo8", "photo1", "photo2", "photo3", "photo4"],
         "advisory": ""
     },
@@ -104,6 +112,7 @@
         "latitude": -33.4100,
         "longitude": 150.3037,
         "heroPicture": "blue-mountains",
+        "images": ["09_01.jpg", "09_02.jpg", "09_03.jpg", "09_04.jpg"],
         "pictures": ["photo1", "photo2", "photo3", "photo4", "photo5", "photo6", "photo7", "photo8"],
         "advisory": "We accept no liability for any visitors eaten alive by drop bears."
     },
@@ -116,6 +125,7 @@
         "latitude": 35.0116,
         "longitude": 135.7681,
         "heroPicture": "kyoto",
+        "images": ["10_01.jpg", "10_02.jpg", "10_03.jpg", "10_04.jpg"],
         "pictures": ["photo2", "photo3", "photo4", "photo5", "photo6", "photo7", "photo8", "photo1"],
         "advisory": "We accept no liability for any visitors eaten alive by Pokemon."
     },
