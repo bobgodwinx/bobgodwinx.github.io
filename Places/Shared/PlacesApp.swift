@@ -1,6 +1,6 @@
 //
 //  PlacesApp.swift
-//  Places
+//  Shared
 //
 //  Created by Bob Godwin Obi on 26.01.21.
 //
@@ -11,7 +11,8 @@ import SwiftUI
 struct PlacesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Navigation()
+            //ContentView()
         }
     }
 }

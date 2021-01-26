@@ -1,13 +1,13 @@
 //
-//  PlacesUITests.swift
-//  PlacesUITests
+//  Tests_iOS.swift
+//  Tests iOS
 //
 //  Created by Bob Godwin Obi on 26.01.21.
 //
 
 import XCTest
 
-class PlacesUITests: XCTestCase {
+class Tests_iOS: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

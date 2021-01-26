@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Places
+//  Shared
 //
 //  Created by Bob Godwin Obi on 26.01.21.
 //
