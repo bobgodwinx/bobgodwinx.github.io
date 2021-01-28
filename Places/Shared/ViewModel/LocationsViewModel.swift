@@ -16,6 +16,15 @@ class LocationsViewModel: ObservableObject {
     /// Private properties
     private let dataService: DataServiceUseCase
     private var bag = Set<AnyCancellable>()
+    
+    /// The publisher
+    var allLocationsPublisher: AnyPublisher<[Location], APIError> {
+        dataService
+            .fetchLocations()
+            .share()
+            .eraseToAnyPublisher()
+    }
+
 
     /// Init requires any kind of `DataServiceUseCase` injection
     init(_ dataService: DataServiceUseCase) {
