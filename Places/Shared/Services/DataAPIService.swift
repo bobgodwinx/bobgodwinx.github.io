@@ -14,8 +14,19 @@ protocol DataServiceUseCase {
 }
 
 struct DataAPIService {
+    
+    private let decoder = JSONDecoder()
+    
     private func request<T: Decodable>(with query: URLRequest) -> AnyPublisher<T, APIError> {
-        ///Add implementation 
+        ///Add implementation
+    }
+    
+    
+    private func decode<T: Decodable>(_ data: Data) -> AnyPublisher<T, APIError> {
+        Just(data)
+            .decode(type: T.self, decoder: decoder)
+            .mapError { .JSONDecoding($0) }
+            .eraseToAnyPublisher()
     }
 }
 
