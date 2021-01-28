@@ -20,7 +20,15 @@ struct ImageAPIService: ImageAPIServiceUseCase {
     static let shared = ImageAPIService()
 
     func fetchImages(_ request: [URLRequest]) -> AnyPublisher<[UIImage], APIError> {
-        ///Add implementation
+        request
+            .publisher
+            .flatMap(maxPublishers: .max(1)){ self.fetchImage($0) }
+            .scan([UIImage]()){ result, image in
+                var _result = result
+                _result.append(image)
+                return _result
+            }
+            .eraseToAnyPublisher()
     }
     
     func fetchImage(_ request: URLRequest) -> AnyPublisher<UIImage, APIError> {
