@@ -8,19 +8,18 @@
 
 import Foundation
 import Combine
-import UIKit.UIImage
 import SwiftUI
 
 struct MockImageAPIService: ImageAPIServiceUseCase {
     
-    let fetchImageSub = PassthroughSubject<UIImage, APIError>()
-    let fetchImagesSub = PassthroughSubject<[UIImage], APIError>()
+    let fetchImageSub = PassthroughSubject<PLImage, APIError>()
+    let fetchImagesSub = PassthroughSubject<[PLImage], APIError>()
     
-    func fetchImages(_ request: [URLRequest]) -> AnyPublisher<[UIImage], APIError> {
+    func fetchImages(_ request: [URLRequest]) -> AnyPublisher<[PLImage], APIError> {
         fetchImagesSub.eraseToAnyPublisher()
     }
     
-    func fetchImage(_ request: URLRequest) -> AnyPublisher<UIImage, APIError> {
+    func fetchImage(_ request: URLRequest) -> AnyPublisher<PLImage, APIError> {
         fetchImageSub.eraseToAnyPublisher()
     }
 }

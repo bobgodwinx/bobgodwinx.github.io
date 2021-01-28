@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-struct MockDataAPIService: DataServiceUseCase {
+class MockDataAPIService: DataServiceUseCase {
     
     let fetchLocationsSub = PassthroughSubject<[Location], APIError>()
     let fetchTipsSub = PassthroughSubject<[Tip], APIError>()
@@ -17,13 +17,15 @@ struct MockDataAPIService: DataServiceUseCase {
         print("Debug: Now using MockDataAPIService")
     }
     static func makeLocations() -> [Location] {
-        let url = Bundle.main.url(forResource: "MockLocations", withExtension: "json")!
+        let bundle = Bundle(for: MockDataAPIService.self)
+        let url = bundle.url(forResource: "MockLocations", withExtension: "json")!
         let data = try! Data(contentsOf: url)
         return try! JSONDecoder().decode([Location].self, from: data)
     }
     
     static func makeTips() -> [Tip] {
-        let url = Bundle.main.url(forResource: "MockTips", withExtension: "json")!
+        let bundle = Bundle(for: MockDataAPIService.self)
+        let url = bundle.url(forResource: "MockTips", withExtension: "json")!
         let data = try! Data(contentsOf: url)
         return try! JSONDecoder().decode([Tip].self, from: data)
     }

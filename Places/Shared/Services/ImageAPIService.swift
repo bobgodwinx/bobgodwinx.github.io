@@ -7,23 +7,30 @@
 
 import Foundation
 import Combine
+#if(iOS)
 import UIKit.UIImage
+typealias PLImage = UIImage
+#else
+import AppKit.NSImage
+typealias PLImage = NSImage
+#endif
+
 
 
 protocol ImageAPIServiceUseCase {
-    func fetchImage(_ request: URLRequest) -> AnyPublisher<UIImage, APIError>
-    func fetchImages(_ request: [URLRequest]) -> AnyPublisher<[UIImage], APIError>
+    func fetchImage(_ request: URLRequest) -> AnyPublisher<PLImage, APIError>
+    func fetchImages(_ request: [URLRequest]) -> AnyPublisher<[PLImage], APIError>
 }
 
 
 struct ImageAPIService: ImageAPIServiceUseCase {
     static let shared = ImageAPIService()
 
-    func fetchImages(_ request: [URLRequest]) -> AnyPublisher<[UIImage], APIError> {
+    func fetchImages(_ request: [URLRequest]) -> AnyPublisher<[PLImage], APIError> {
         request
             .publisher
             .flatMap(maxPublishers: .max(1)){ self.fetchImage($0) }
-            .scan([UIImage]()){ result, image in
+            .scan([PLImage]()){ result, image in
                 var _result = result
                 _result.append(image)
                 return _result
@@ -31,12 +38,12 @@ struct ImageAPIService: ImageAPIServiceUseCase {
             .eraseToAnyPublisher()
     }
     
-    func fetchImage(_ request: URLRequest) -> AnyPublisher<UIImage, APIError> {
+    func fetchImage(_ request: URLRequest) -> AnyPublisher<PLImage, APIError> {
         URLSession
             .shared
             .dataTaskPublisher(for: request)
             .compactMap { $0.data }
-            .compactMap { UIImage(data: $0) }
+            .compactMap { PLImage(data: $0) }
             .mapError { .image($0) }
             .eraseToAnyPublisher()
     }
