@@ -15,10 +15,17 @@ protocol DataServiceUseCase {
 
 struct DataAPIService {
     
+    static let shared = DataAPIService()
     private let decoder = JSONDecoder()
     
     private func request<T: Decodable>(with query: URLRequest) -> AnyPublisher<T, APIError> {
-        ///Add implementation
+        URLSession
+            .shared
+            .dataTaskPublisher(for: query)
+            .retry(1)
+            .mapError { .network($0) }
+            .flatMap(maxPublishers: .max(1)) { decode($0.data) }
+            .eraseToAnyPublisher()
     }
     
     
