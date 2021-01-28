@@ -24,6 +24,12 @@ struct ImageAPIService: ImageAPIServiceUseCase {
     }
     
     func fetchImage(_ request: URLRequest) -> AnyPublisher<UIImage, APIError> {
-        ///Add implementation
+        URLSession
+            .shared
+            .dataTaskPublisher(for: request)
+            .compactMap { $0.data }
+            .compactMap { UIImage(data: $0) }
+            .mapError { .image($0) }
+            .eraseToAnyPublisher()
     }
 }
