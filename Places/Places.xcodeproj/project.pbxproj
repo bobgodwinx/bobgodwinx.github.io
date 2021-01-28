@@ -63,6 +63,10 @@
 		C44AC1CF25C32A2D0070B9E4 /* MockImageAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44AC1CD25C32A2D0070B9E4 /* MockImageAPIService.swift */; };
 		C44AC1D025C32A2D0070B9E4 /* MockImageAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44AC1CD25C32A2D0070B9E4 /* MockImageAPIService.swift */; };
 		C44AC1D125C32A2D0070B9E4 /* MockImageAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44AC1CD25C32A2D0070B9E4 /* MockImageAPIService.swift */; };
+		C44AC1DC25C32B1B0070B9E4 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44AC1DB25C32B1A0070B9E4 /* LocationsViewModel.swift */; };
+		C44AC1DD25C32B1B0070B9E4 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44AC1DB25C32B1A0070B9E4 /* LocationsViewModel.swift */; };
+		C44AC1DE25C32B1B0070B9E4 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44AC1DB25C32B1A0070B9E4 /* LocationsViewModel.swift */; };
+		C44AC1DF25C32B1B0070B9E4 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44AC1DB25C32B1A0070B9E4 /* LocationsViewModel.swift */; };
 		C4A14D7325C0579B00532FD4 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A14D7225C0579B00532FD4 /* Tests_iOS.swift */; };
 		C4A14D7E25C0579B00532FD4 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A14D7D25C0579B00532FD4 /* Tests_macOS.swift */; };
 		C4A14D8025C0579B00532FD4 /* PlacesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A14D5725C0579900532FD4 /* PlacesApp.swift */; };
@@ -127,6 +131,7 @@
 		C44AC1B725C326CB0070B9E4 /* MockTips.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockTips.json; sourceTree = "<group>"; };
 		C44AC1C425C3280E0070B9E4 /* MockDataAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataAPIService.swift; sourceTree = "<group>"; };
 		C44AC1CD25C32A2D0070B9E4 /* MockImageAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImageAPIService.swift; sourceTree = "<group>"; };
+		C44AC1DB25C32B1A0070B9E4 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
 		C4A14D5725C0579900532FD4 /* PlacesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesApp.swift; sourceTree = "<group>"; };
 		C4A14D5825C0579900532FD4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C4A14D5925C0579B00532FD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -222,6 +227,14 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		C44AC1DA25C32AD30070B9E4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C44AC1DB25C32B1A0070B9E4 /* LocationsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C4A14D5125C0579900532FD4 = {
 			isa = PBXGroup;
 			children = (
@@ -238,9 +251,10 @@
 			isa = PBXGroup;
 			children = (
 				C44AC18325C208F10070B9E4 /* Helpers */,
-				C44AC17525C208220070B9E4 /* Services */,
 				C44AC15525C1EB910070B9E4 /* ConcreteTypes */,
+				C44AC17525C208220070B9E4 /* Services */,
 				C4A14DDB25C05CF500532FD4 /* Navigation */,
+				C44AC1DA25C32AD30070B9E4 /* ViewModel */,
 				C4A14DA525C05AB500532FD4 /* Views */,
 				C4A14D5725C0579900532FD4 /* PlacesApp.swift */,
 				C4A14D5825C0579900532FD4 /* ContentView.swift */,
@@ -492,6 +506,7 @@
 				C44AC1A425C31B110070B9E4 /* ImageAPIService.swift in Sources */,
 				C44AC19B25C3195B0070B9E4 /* DataAPIService.swift in Sources */,
 				C4A14D8225C0579B00532FD4 /* ContentView.swift in Sources */,
+				C44AC1DC25C32B1B0070B9E4 /* LocationsViewModel.swift in Sources */,
 				C4A14DCF25C05CE300532FD4 /* Navigation.swift in Sources */,
 				C44AC16D25C1EF1D0070B9E4 /* Tips.swift in Sources */,
 				C44AC14C25C09CAB0070B9E4 /* AppSideBarNavigation.swift in Sources */,
@@ -528,6 +543,7 @@
 				C44AC1A525C31B110070B9E4 /* ImageAPIService.swift in Sources */,
 				C4A14D8125C0579B00532FD4 /* PlacesApp.swift in Sources */,
 				C44AC1AE25C31DDF0070B9E4 /* LocationImage.swift in Sources */,
+				C44AC1DD25C32B1B0070B9E4 /* LocationsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +570,7 @@
 				C44AC1A625C31B110070B9E4 /* ImageAPIService.swift in Sources */,
 				C4A14D9C25C0585800532FD4 /* AppTabNavigation.swift in Sources */,
 				C44AC1AF25C31DDF0070B9E4 /* LocationImage.swift in Sources */,
+				C44AC1DE25C32B1B0070B9E4 /* LocationsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,6 +583,7 @@
 				C44AC17025C1EF1D0070B9E4 /* Tips.swift in Sources */,
 				C4A14DC025C05B4E00532FD4 /* TipsView.swift in Sources */,
 				C44AC15A25C1EBCF0070B9E4 /* Location.swift in Sources */,
+				C44AC1DF25C32B1B0070B9E4 /* LocationsViewModel.swift in Sources */,
 				C44AC19525C318DF0070B9E4 /* ImageEndpoint.swift in Sources */,
 				C4A14D7E25C0579B00532FD4 /* Tests_macOS.swift in Sources */,
 				C44AC1C825C3280E0070B9E4 /* MockDataAPIService.swift in Sources */,
