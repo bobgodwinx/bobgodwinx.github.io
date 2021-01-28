@@ -1,0 +1,18 @@
+[
+	{
+		"text": "Where to go",
+        "children": [
+            {
+                "text": "How about magnificent Morocco? Or incredible India? Or wonderful, er, Wamerica? We have vacations in every continent in the world, so you can go wherever your heart leads you – or wherever your bank account can afford, whichever comes first. Just pick up the phone and get in touch today and we'll bring the holiday of your dreams to life. (Please contact your bank manager first.)"
+            }
+        ]
+	},
+	{
+		"text": "When to travel",
+        "children": [
+            {
+                "text": "If you're looking for a special summer getaway, we have a great vacation for you. If you're looking for a cheeky winter break, we can make it happen. If you accidentally said 'you too' after a cinema usher ripped your ticket and told you to enjoy the film and now need to fly to the opposite end of the planet and assume a false name to avoid eternal embarrassment, we're here to help. TL;DR: we're pretty darn good at vacations."
+            }
+        ]
+	}
+]
