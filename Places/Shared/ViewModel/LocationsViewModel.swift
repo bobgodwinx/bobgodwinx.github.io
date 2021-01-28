@@ -25,10 +25,25 @@ class LocationsViewModel: ObservableObject {
             .eraseToAnyPublisher()
     }
 
-
     /// Init requires any kind of `DataServiceUseCase` injection
     init(_ dataService: DataServiceUseCase) {
         self.dataService = dataService
+    }
+    
+    /// Setup Bindings to Bindable properties with View
+    func bind() {
+        allLocationsPublisher
+            .receive(on: RunLoop.main)
+            .map({$0[0]})
+            .catch({Just(Location.make(with: $0))})
+            .assign(to: \.primary, on: self)
+            .store(in: &bag)
+        
+        allLocationsPublisher
+            .receive(on: RunLoop.main)
+            .replaceError(with: [])
+            .assign(to: \.places, on: self)
+            .store(in: &bag)
     }
     
     deinit {
