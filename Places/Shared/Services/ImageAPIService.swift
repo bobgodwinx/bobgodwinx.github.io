@@ -7,10 +7,13 @@
 
 import Foundation
 import Combine
+
 #if(iOS)
 import UIKit.UIImage
 typealias PLImage = UIImage
-#else
+#endif
+
+#if(macOS)
 import AppKit.NSImage
 typealias PLImage = NSImage
 #endif

@@ -64,22 +64,35 @@ struct compactView: View  {
 struct AppTabNavigation: View {
     
     @ObservedObject var locationsViewModel: LocationsViewModel
-    @ObservedObject var viewModel: ImageGalleryViewModel
-    @ObservedObject var viewModel: TipsViewModel
+    @ObservedObject var imageGalleryViewModel: ImageGalleryViewModel
+    @ObservedObject var tipsViewModel: TipsViewModel
+    
+    init(_ locationsViewModel: LocationsViewModel,
+         _ imageGalleryViewModel: ImageGalleryViewModel,
+         _ tipsViewModel: TipsViewModel) {
+        self.locationsViewModel = locationsViewModel
+        self.imageGalleryViewModel = imageGalleryViewModel
+        self.tipsViewModel = tipsViewModel
+    }
     
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     
     var body: some View {
         if horizontalSizeClass == .compact {
-            compactView()
+            compactView(locationsViewModel, imageGalleryViewModel, tipsViewModel)
         } else {
-            AppSideBarNavigation()
+            AppTabNavigation(locationsViewModel, imageGalleryViewModel, tipsViewModel)
         }
     }
 }
 
 struct AppTabNavigation_Previews: PreviewProvider {
     static var previews: some View {
-        AppTabNavigation()
+        let mockDataAPIService = MockDataAPIService()
+        let mockImageAPIService = MockImageAPIService()
+        let locationsViewModel = LocationsViewModel(mockDataAPIService)
+        let tipsViewModel = TipsViewModel(mockDataAPIService)
+        let imageGalleryViewModel = ImageGalleryViewModel(mockImageAPIService, mockDataAPIService)
+        AppTabNavigation(locationsViewModel, imageGalleryViewModel, tipsViewModel)
     }
 }
