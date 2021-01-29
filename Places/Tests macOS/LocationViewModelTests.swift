@@ -61,6 +61,25 @@ class LocationsViewModelTests: XCTestCase {
         XCTAssertNotNil(completion)
         XCTAssertEqual(completion.unwrap().error, decodingError)
     }
+    
+    func test_allLocationsPublisher_had_a_server_error() throws {
+        /// Given
+        var completion: Subscribers.Completion<APIError>?
+        let nserror = NSError(domain: "Could not reach the server bo", code: 404, userInfo: nil)
+        let serverError = APIError.server(nserror)
+        let expected = MockDataAPIService.makeLocations()
+        /// When
+        mock.fetchLocationsSub.send(expected)
+        mock.fetchLocationsSub.send(completion: .failure(serverError))
+        /// Then
+        sut.allLocationsPublisher
+            .sink (receiveCompletion: { completion = $0 },
+                   receiveValue: { _ in  })
+            .store(in: &bag)
+
+        XCTAssertNotNil(completion)
+        XCTAssertEqual(completion.unwrap().error, serverError)
+    }
 
 }
 
