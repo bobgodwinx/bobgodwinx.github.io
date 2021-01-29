@@ -8,13 +8,39 @@
 import SwiftUI
 
 struct TipsView: View {
+    @ObservedObject var viewModel: TipsViewModel
+    
+    init(viewModel: TipsViewModel) {
+        self.viewModel = viewModel
+    }
+
     var body: some View {
-        Text("TipsView")
+        List(viewModel.tips, id: \.hash, children: \.children) { tip in
+            if tip.children != nil {
+                Label(tip.text, systemImage: "quote.bubble")
+                    .font(.headline)
+            } else {
+                Text(tip.text)
+            }
+        }
+        .navigationTitle("Tips")
     }
 }
 
 struct TipsView_Previews: PreviewProvider {
     static var previews: some View {
-        TipsView()
+        let service = MockDataAPIService()
+        let viewModel = TipsViewModel(service)
+        viewModel.tips = MockDataAPIService.makeTips()
+        
+        return TabView {
+            NavigationView {
+                TipsView(viewModel: viewModel)
+            }
+            .tabItem {
+                Image(systemName: "airplane.circle.fill")
+                Text("Discover")
+            }
+        }
     }
 }

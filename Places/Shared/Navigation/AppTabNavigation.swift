@@ -42,7 +42,7 @@ struct compactView: View  {
                 }
                 
                 NavigationView {
-                    TipsView()
+                    TipsView(viewModel: tipsViewModel)
                 }
                 .tabItem {
                     Image(systemName: "list.bullet")

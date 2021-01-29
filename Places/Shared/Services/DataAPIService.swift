@@ -53,6 +53,7 @@ extension URLRequest {
         let url = URL(string: str).unwrap()
         self.init(url: url)
         self.httpMethod = method.rawValue
+        self.cachePolicy = .reloadIgnoringLocalCacheData
     }
 }
 

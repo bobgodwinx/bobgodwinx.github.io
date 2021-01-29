@@ -8,7 +8,7 @@
 import Foundation
 
 enum Endpoint:String, CustomStringConvertible, RawRepresentable {
-    static let baseURLString = "https://bobgodwinx.github.io/trekr/Assets"
+    static let baseURLString = "https://bobgodwinx.github.io/PlacesAssets/Assets"
     case location
     case tips
     

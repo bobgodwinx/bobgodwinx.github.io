@@ -34,7 +34,7 @@ struct AppSideBarNavigation: View {
                     .tag(Navigation.Item.map)
             }
             
-            NavigationLink(destination: TipsView()) {
+            NavigationLink(destination: TipsView(viewModel: tipsViewModel)) {
                 Label("Tips", systemImage: "list.bullet")
                     .tag(Navigation.Item.tips)
             }
