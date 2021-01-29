@@ -26,7 +26,7 @@ struct compactView: View  {
         NavigationView {
             TabView(selection: $selection) {
                 NavigationView {
-                    LocationView()
+                    LocationView(with: locationsViewModel.primary)
                 }
                 .tabItem {
                     Image(systemName: "airplane.circle.fill")

@@ -16,9 +16,11 @@ struct Navigation: View {
     @ViewBuilder var body: some View {
         #if os(iOS)
             AppTabNavigation(locationsViewModel, imageViewModel, tipsViewModel)
+                .onAppear(perform: locationsViewModel.bind)
                 .onAppear(perform: tipsViewModel.bind)
         #else
             AppSideBarNavigation(locationsViewModel, imageViewModel, tipsViewModel)
+                .onAppear(perform: locationsViewModel.bind)
                 .onAppear(perform: tipsViewModel.bind)
         #endif
     }

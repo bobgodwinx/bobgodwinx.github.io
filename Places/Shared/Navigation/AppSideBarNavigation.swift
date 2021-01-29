@@ -24,7 +24,7 @@ struct AppSideBarNavigation: View {
     
     var sideBar: some View {
         List(selection: $selection) {
-            NavigationLink(destination: LocationView()) {
+            NavigationLink(destination: LocationView(with: locationsViewModel.primary)) {
                 Label("Discover", systemImage: "airplane.circle.fill")
                     .tag(Navigation.Item.location)
             }
@@ -52,7 +52,7 @@ struct AppSideBarNavigation: View {
     var body: some View {
         NavigationView {
             sideBar
-            LocationView()
+            LocationView(with: locationsViewModel.primary)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }
