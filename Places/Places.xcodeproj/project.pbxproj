@@ -77,6 +77,7 @@
 		C44AC26025C430E60070B9E4 /* ImageGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44AC25E25C430E60070B9E4 /* ImageGalleryViewModel.swift */; };
 		C44AC26125C430E60070B9E4 /* ImageGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44AC25E25C430E60070B9E4 /* ImageGalleryViewModel.swift */; };
 		C44AC26225C430E60070B9E4 /* ImageGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44AC25E25C430E60070B9E4 /* ImageGalleryViewModel.swift */; };
+		C44AC26825C434390070B9E4 /* ImageGalleryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44AC26725C434390070B9E4 /* ImageGalleryViewModelTests.swift */; };
 		C4A14D7325C0579B00532FD4 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A14D7225C0579B00532FD4 /* Tests_iOS.swift */; };
 		C4A14D7E25C0579B00532FD4 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A14D7D25C0579B00532FD4 /* Tests_macOS.swift */; };
 		C4A14D8025C0579B00532FD4 /* PlacesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A14D5725C0579900532FD4 /* PlacesApp.swift */; };
@@ -146,6 +147,7 @@
 		C44AC24B25C42F8C0070B9E4 /* TipsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewModel.swift; sourceTree = "<group>"; };
 		C44AC25425C430110070B9E4 /* TipsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewModelTests.swift; sourceTree = "<group>"; };
 		C44AC25E25C430E60070B9E4 /* ImageGalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewModel.swift; sourceTree = "<group>"; };
+		C44AC26725C434390070B9E4 /* ImageGalleryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewModelTests.swift; sourceTree = "<group>"; };
 		C4A14D5725C0579900532FD4 /* PlacesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesApp.swift; sourceTree = "<group>"; };
 		C4A14D5825C0579900532FD4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C4A14D5925C0579B00532FD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 				C4A14D7F25C0579B00532FD4 /* Info.plist */,
 				C44AC1E825C33FED0070B9E4 /* LocationViewModelTests.swift */,
 				C44AC25425C430110070B9E4 /* TipsViewModelTests.swift */,
+				C44AC26725C434390070B9E4 /* ImageGalleryViewModelTests.swift */,
 			);
 			path = "Tests macOS";
 			sourceTree = "<group>";
@@ -612,6 +615,7 @@
 				C44AC24F25C42F8C0070B9E4 /* TipsViewModel.swift in Sources */,
 				C4A14D7E25C0579B00532FD4 /* Tests_macOS.swift in Sources */,
 				C44AC25525C430110070B9E4 /* TipsViewModelTests.swift in Sources */,
+				C44AC26825C434390070B9E4 /* ImageGalleryViewModelTests.swift in Sources */,
 				C44AC1C825C3280E0070B9E4 /* MockDataAPIService.swift in Sources */,
 				C44AC1D125C32A2D0070B9E4 /* MockImageAPIService.swift in Sources */,
 				C4A14DB725C05B2B00532FD4 /* MapView.swift in Sources */,
