@@ -21,4 +21,12 @@ class ImageGalleryViewModel: ObservableObject {
         self.imageService = imageService
         self.dataService = dataService
     }
+
+    var locationImagesPublisher: AnyPublisher<[LocationImage], APIError> {
+        /// add implementation for now just empty
+        Just([])
+            .mapError {_ in APIError.never }
+            .eraseToAnyPublisher()
+    }
+    
 }
