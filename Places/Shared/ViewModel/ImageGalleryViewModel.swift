@@ -29,4 +29,13 @@ class ImageGalleryViewModel: ObservableObject {
             .eraseToAnyPublisher()
     }
     
+    func bind() {
+        // reason for the `guard` is that we want to call this on `onAppear:`
+        guard self.locationImages.isEmpty else { return }
+        locationImagesPublisher
+            .receive(on: RunLoop.main)
+            .replaceError(with: [])
+            .assign(to: \.locationImages, on: self)
+            .store(in: &bag)
+    }
 }
