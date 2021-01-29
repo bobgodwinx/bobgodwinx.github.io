@@ -43,6 +43,49 @@ class LocationsViewModelTests: XCTestCase {
             .store(in: &bag)
         XCTAssertTrue(completed)
     }
+    
+    func test_allLocationsPublisher_error_while_decoding() throws {
+        /// Given
+        var completion: Subscribers.Completion<APIError>?
+        let decodingError = APIError.JSONDecoding("Some corrupt data")
+        let expected = MockDataAPIService.makeLocations()
+        /// When
+        mock.fetchLocationsSub.send(expected)
+        mock.fetchLocationsSub.send(completion: .failure(decodingError))
+        /// Then
+        sut.allLocationsPublisher
+            .sink (receiveCompletion: { completion = $0 },
+                   receiveValue: { _ in  })
+            .store(in: &bag)
+
+        XCTAssertNotNil(completion)
+        XCTAssertEqual(completion.unwrap().error, decodingError)
+    }
 
 }
 
+
+/// Unit Test Helpers
+extension String: Error { }
+
+extension APIError: Equatable {
+    public static func == (lhs: APIError, rhs: APIError) -> Bool {
+        switch (lhs, rhs) {
+        case (.JSONDecoding, .JSONDecoding): return true
+        case (.network, .network): return true
+        case (.server, .server): return true
+        case (.image, .image): return true
+        case (.never, .never): return true
+        default: return false
+        }
+    }
+}
+
+extension Subscribers.Completion {
+    var error: Failure? {
+        switch self {
+        case .finished: return nil
+        case let .failure(error): return error
+        }
+    }
+}
