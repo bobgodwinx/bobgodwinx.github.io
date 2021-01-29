@@ -8,23 +8,18 @@
 import Foundation
 import Combine
 
-#if(iOS)
-import UIKit.UIImage
-typealias PLImage = UIImage
+#if os(iOS)
+    import UIKit.UIImage
+    typealias PLImage = UIImage
+#elseif os(macOS)
+    import AppKit.NSImage
+    typealias PLImage = NSImage
 #endif
-
-#if(macOS)
-import AppKit.NSImage
-typealias PLImage = NSImage
-#endif
-
-
 
 protocol ImageAPIServiceUseCase {
     func fetchImage(_ request: URLRequest) -> AnyPublisher<PLImage, APIError>
     func fetchImages(_ request: [URLRequest]) -> AnyPublisher<[PLImage], APIError>
 }
-
 
 struct ImageAPIService: ImageAPIServiceUseCase {
     static let shared = ImageAPIService()
