@@ -8,6 +8,17 @@
 import SwiftUI
 
 struct AppSideBarNavigation: View {
+    @ObservedObject var locationsViewModel: LocationsViewModel
+    @ObservedObject var imageGalleryViewModel: ImageGalleryViewModel
+    @ObservedObject var tipsViewModel: TipsViewModel
+    
+    init(_ locationsViewModel: LocationsViewModel,
+         _ imageGalleryViewModel: ImageGalleryViewModel,
+         _ tipsViewModel: TipsViewModel) {
+        self.locationsViewModel = locationsViewModel
+        self.imageGalleryViewModel = imageGalleryViewModel
+        self.tipsViewModel = tipsViewModel
+    }
     
     @State private var selection: Set<Navigation.Item> = [.location]
     
@@ -49,6 +60,11 @@ struct AppSideBarNavigation: View {
 
 struct AppSideBarNavigation_Previews: PreviewProvider {
     static var previews: some View {
-        AppSideBarNavigation()
+        let mockDataAPIService = MockDataAPIService()
+        let mockImageAPIService = MockImageAPIService()
+        let locationsViewModel = LocationsViewModel(mockDataAPIService)
+        let tipsViewModel = TipsViewModel(mockDataAPIService)
+        let imageGalleryViewModel = ImageGalleryViewModel(mockImageAPIService, mockDataAPIService)
+       return AppSideBarNavigation(locationsViewModel, imageGalleryViewModel, tipsViewModel)
     }
 }

@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct compactView: View  {
+    @ObservedObject var locationsViewModel: LocationsViewModel
+    @ObservedObject var imageGalleryViewModel: ImageGalleryViewModel
+    @ObservedObject var tipsViewModel: TipsViewModel
     
     @State private var selection: Navigation.Item = .location
+    
+    init(_ locationsViewModel: LocationsViewModel,
+         _ imageGalleryViewModel: ImageGalleryViewModel,
+         _ tipsViewModel: TipsViewModel) {
+        self.locationsViewModel = locationsViewModel
+        self.imageGalleryViewModel = imageGalleryViewModel
+        self.tipsViewModel = tipsViewModel
+    }
     
     var body: some View {
         NavigationView {
@@ -52,6 +63,9 @@ struct compactView: View  {
 
 struct AppTabNavigation: View {
     
+    @ObservedObject var locationsViewModel: LocationsViewModel
+    @ObservedObject var viewModel: ImageGalleryViewModel
+    @ObservedObject var viewModel: TipsViewModel
     
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     

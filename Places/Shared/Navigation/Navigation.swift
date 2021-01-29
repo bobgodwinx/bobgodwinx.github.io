@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct Navigation: View {
+    /// All Dependency injections here! 👇🏾
+    @StateObject var locationsViewModel = LocationsViewModel(DataAPIService.shared)
+    @StateObject var tipsViewModel = TipsViewModel(DataAPIService.shared)
+    @StateObject var imageViewModel = ImageGalleryViewModel(ImageAPIService.shared, DataAPIService.shared)
 
     @ViewBuilder var body: some View {
         #if os(iOS)
-            AppTabNavigation()
+            AppTabNavigation(locationsViewModel, imageViewModel, tipsViewModel)
         #else
-            AppSideBarNavigation()
+            AppSideBarNavigation(locationsViewModel, imageViewModel, tipsViewModel)
         #endif
     }
     
