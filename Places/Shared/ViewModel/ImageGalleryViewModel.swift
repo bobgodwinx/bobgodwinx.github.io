@@ -23,9 +23,21 @@ class ImageGalleryViewModel: ObservableObject {
     }
 
     var locationImagesPublisher: AnyPublisher<[LocationImage], APIError> {
-        /// add implementation for now just empty
-        Just([])
-            .mapError {_ in APIError.never }
+        let baseString = Endpoint.baseURLString
+        return dataService
+            .fetchLocations()
+            .compactMap ({
+                $0.map ({ location -> [URLRequest] in
+                    let id = location.id
+                     return location
+                        .images
+                        .map({ ImageEndpoint.makeRequest(ImageEndpoint(id, baseString, $0)) })
+                })
+            })
+            .map({ $0.flatMap { $0 } })
+            .flatMap(maxPublishers: .max(1)){ self.imageService.fetchImages($0) }
+            .map({ $0.map(Image.init) })
+            .map({$0.map(LocationImage.init)})
             .eraseToAnyPublisher()
     }
     
