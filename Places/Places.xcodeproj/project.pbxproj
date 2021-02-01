@@ -78,6 +78,10 @@
 		C44AC26125C430E60070B9E4 /* ImageGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44AC25E25C430E60070B9E4 /* ImageGalleryViewModel.swift */; };
 		C44AC26225C430E60070B9E4 /* ImageGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44AC25E25C430E60070B9E4 /* ImageGalleryViewModel.swift */; };
 		C44AC26825C434390070B9E4 /* ImageGalleryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44AC26725C434390070B9E4 /* ImageGalleryViewModelTests.swift */; };
+		C49300DE25C880A6003DD73C /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49300DD25C880A6003DD73C /* ImageDetailView.swift */; };
+		C49300DF25C880A6003DD73C /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49300DD25C880A6003DD73C /* ImageDetailView.swift */; };
+		C49300E025C880A6003DD73C /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49300DD25C880A6003DD73C /* ImageDetailView.swift */; };
+		C49300E125C880A6003DD73C /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49300DD25C880A6003DD73C /* ImageDetailView.swift */; };
 		C4A14D7325C0579B00532FD4 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A14D7225C0579B00532FD4 /* Tests_iOS.swift */; };
 		C4A14D7E25C0579B00532FD4 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A14D7D25C0579B00532FD4 /* Tests_macOS.swift */; };
 		C4A14D8025C0579B00532FD4 /* PlacesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A14D5725C0579900532FD4 /* PlacesApp.swift */; };
@@ -148,6 +152,7 @@
 		C44AC25425C430110070B9E4 /* TipsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewModelTests.swift; sourceTree = "<group>"; };
 		C44AC25E25C430E60070B9E4 /* ImageGalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewModel.swift; sourceTree = "<group>"; };
 		C44AC26725C434390070B9E4 /* ImageGalleryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewModelTests.swift; sourceTree = "<group>"; };
+		C49300DD25C880A6003DD73C /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
 		C4A14D5725C0579900532FD4 /* PlacesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesApp.swift; sourceTree = "<group>"; };
 		C4A14D5825C0579900532FD4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C4A14D5925C0579B00532FD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -338,6 +343,7 @@
 				C4A14DB325C05B2B00532FD4 /* MapView.swift */,
 				C4A14DBC25C05B4E00532FD4 /* TipsView.swift */,
 				C4A14DC525C05B6D00532FD4 /* GalleryView.swift */,
+				C49300DD25C880A6003DD73C /* ImageDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -534,6 +540,7 @@
 				C44AC25F25C430E60070B9E4 /* ImageGalleryViewModel.swift in Sources */,
 				C44AC14C25C09CAB0070B9E4 /* AppSideBarNavigation.swift in Sources */,
 				C4A14DA725C05AE600532FD4 /* LocationView.swift in Sources */,
+				C49300DE25C880A6003DD73C /* ImageDetailView.swift in Sources */,
 				C4A14DB425C05B2B00532FD4 /* MapView.swift in Sources */,
 				C4A14D8025C0579B00532FD4 /* PlacesApp.swift in Sources */,
 				C4A14D9B25C0585800532FD4 /* AppTabNavigation.swift in Sources */,
@@ -556,6 +563,7 @@
 				C44AC16525C1EC270070B9E4 /* APIError.swift in Sources */,
 				C44AC19C25C3195B0070B9E4 /* DataAPIService.swift in Sources */,
 				C44AC24D25C42F8C0070B9E4 /* TipsViewModel.swift in Sources */,
+				C49300DF25C880A6003DD73C /* ImageDetailView.swift in Sources */,
 				C44AC13D25C08EDC0070B9E4 /* AppSideBarNavigation.swift in Sources */,
 				C44AC15825C1EBCF0070B9E4 /* Location.swift in Sources */,
 				C4A14D8325C0579B00532FD4 /* ContentView.swift in Sources */,
@@ -585,6 +593,7 @@
 				C44AC16625C1EC270070B9E4 /* APIError.swift in Sources */,
 				C44AC19D25C3195B0070B9E4 /* DataAPIService.swift in Sources */,
 				C44AC24E25C42F8C0070B9E4 /* TipsViewModel.swift in Sources */,
+				C49300E025C880A6003DD73C /* ImageDetailView.swift in Sources */,
 				C4A14DD125C05CE300532FD4 /* Navigation.swift in Sources */,
 				C44AC15925C1EBCF0070B9E4 /* Location.swift in Sources */,
 				C4A14D7325C0579B00532FD4 /* Tests_iOS.swift in Sources */,
@@ -609,6 +618,7 @@
 				C44AC13E25C08EDC0070B9E4 /* AppSideBarNavigation.swift in Sources */,
 				C44AC17025C1EF1D0070B9E4 /* Tips.swift in Sources */,
 				C4A14DC025C05B4E00532FD4 /* TipsView.swift in Sources */,
+				C49300E125C880A6003DD73C /* ImageDetailView.swift in Sources */,
 				C44AC15A25C1EBCF0070B9E4 /* Location.swift in Sources */,
 				C44AC1DF25C32B1B0070B9E4 /* LocationsViewModel.swift in Sources */,
 				C44AC19525C318DF0070B9E4 /* ImageEndpoint.swift in Sources */,

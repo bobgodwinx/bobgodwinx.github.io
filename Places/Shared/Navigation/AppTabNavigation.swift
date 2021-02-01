@@ -32,6 +32,7 @@ struct compactView: View  {
                     Image(systemName: "airplane.circle.fill")
                     Text("Discover")
                 }
+                .tag(Navigation.Item.location)
                 
                 NavigationView {
                     MapView()
@@ -40,6 +41,7 @@ struct compactView: View  {
                     Image(systemName: "map.fill")
                     Text("Locations")
                 }
+                .tag(Navigation.Item.map)
                 
                 NavigationView {
                     TipsView(viewModel: tipsViewModel)
@@ -48,14 +50,16 @@ struct compactView: View  {
                     Image(systemName: "list.bullet")
                     Text("Tips")
                 }
+                .tag(Navigation.Item.tips)
                 
                 NavigationView {
-                    GalleryView()
+                    GalleryView(viewModel: imageGalleryViewModel)
                 }
                 .tabItem {
                     Image(systemName: "rectangle.3.offgrid")
                     Text("Gallery")
                 }
+                .tag(Navigation.Item.gallery)
             }
         }
     }

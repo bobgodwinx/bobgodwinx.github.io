@@ -39,7 +39,8 @@ struct AppSideBarNavigation: View {
                     .tag(Navigation.Item.tips)
             }
             
-            NavigationLink(destination: GalleryView()) {
+            NavigationLink(destination: GalleryView(viewModel: imageGalleryViewModel)
+                            .onAppear(perform: imageGalleryViewModel.bind)) {
                 Label("Gallery", systemImage: "rectangle.3.offgrid")
                     .tag(Navigation.Item.gallery)
             }
