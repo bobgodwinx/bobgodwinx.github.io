@@ -35,7 +35,7 @@ struct compactView: View  {
                 .tag(Navigation.Item.location)
                 
                 NavigationView {
-                    MapView()
+                    MapView(viewModel: locationsViewModel)
                 }
                 .tabItem {
                     Image(systemName: "map.fill")

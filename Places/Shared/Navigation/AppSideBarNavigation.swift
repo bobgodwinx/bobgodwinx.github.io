@@ -29,7 +29,7 @@ struct AppSideBarNavigation: View {
                     .tag(Navigation.Item.location)
             }
             
-            NavigationLink(destination: MapView()) {
+            NavigationLink(destination: MapView(viewModel: locationsViewModel)) {
                 Label("Map", systemImage: "map.fill")
                     .tag(Navigation.Item.map)
             }
