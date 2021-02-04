@@ -32,6 +32,7 @@ struct compactView: View  {
                     Image(systemName: "airplane.circle.fill")
                     Text("Discover")
                 }
+                .navigationBarHidden(true)
                 .tag(Navigation.Item.location)
                 
                 NavigationView {

@@ -30,7 +30,7 @@ struct GalleryView: View {
     ]
     
     var body: some View {
-        ScrollView(.vertical, showsIndicators: true){
+        ScrollView(.vertical, showsIndicators: true) {
             LazyVGrid(columns: colums) {
                 ForEach(viewModel.locationImages, id: \.id) { locationImage in
                     NavigationLink(destination: ImageDetailView(image: locationImage.image)) {
