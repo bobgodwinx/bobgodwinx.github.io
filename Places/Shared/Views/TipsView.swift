@@ -15,14 +15,10 @@ struct TipsView: View {
     }
 
     var body: some View {
-        List(viewModel.tips, id: \.hash, children: \.children) { tip in
-            if tip.children != nil {
-                Label(tip.text, systemImage: "quote.bubble")
-                    .font(.headline)
-            } else {
-                Text(tip.text)
-            }
-        }
+        List(viewModel.tips,
+             id: \.hash,
+             children: \.children,
+             rowContent: TipView.init)
         .navigationTitle("Tips")
     }
 }

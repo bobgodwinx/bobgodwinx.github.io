@@ -112,6 +112,10 @@
 		C4A14DD025C05CE300532FD4 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A14DCE25C05CE300532FD4 /* Navigation.swift */; };
 		C4A14DD125C05CE300532FD4 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A14DCE25C05CE300532FD4 /* Navigation.swift */; };
 		C4A14DD225C05CE300532FD4 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A14DCE25C05CE300532FD4 /* Navigation.swift */; };
+		C4D3B6E025CC4161005EBE93 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D3B6DF25CC4161005EBE93 /* TipView.swift */; };
+		C4D3B6E125CC4161005EBE93 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D3B6DF25CC4161005EBE93 /* TipView.swift */; };
+		C4D3B6E225CC4161005EBE93 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D3B6DF25CC4161005EBE93 /* TipView.swift */; };
+		C4D3B6E325CC4161005EBE93 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D3B6DF25CC4161005EBE93 /* TipView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +177,7 @@
 		C4A14DBC25C05B4E00532FD4 /* TipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
 		C4A14DC525C05B6D00532FD4 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		C4A14DCE25C05CE300532FD4 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		C4D3B6DF25CC4161005EBE93 /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,6 +347,7 @@
 				C4A14DA625C05AE600532FD4 /* LocationView.swift */,
 				C4A14DB325C05B2B00532FD4 /* MapView.swift */,
 				C4A14DBC25C05B4E00532FD4 /* TipsView.swift */,
+				C4D3B6DF25CC4161005EBE93 /* TipView.swift */,
 				C4A14DC525C05B6D00532FD4 /* GalleryView.swift */,
 				C49300DD25C880A6003DD73C /* ImageDetailView.swift */,
 			);
@@ -547,6 +553,7 @@
 				C44AC16425C1EC270070B9E4 /* APIError.swift in Sources */,
 				C44AC19225C318DF0070B9E4 /* ImageEndpoint.swift in Sources */,
 				C44AC18525C2090B0070B9E4 /* Helper+ext.swift in Sources */,
+				C4D3B6E025CC4161005EBE93 /* TipView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +569,7 @@
 				C4A14DD025C05CE300532FD4 /* Navigation.swift in Sources */,
 				C44AC16525C1EC270070B9E4 /* APIError.swift in Sources */,
 				C44AC19C25C3195B0070B9E4 /* DataAPIService.swift in Sources */,
+				C4D3B6E125CC4161005EBE93 /* TipView.swift in Sources */,
 				C44AC24D25C42F8C0070B9E4 /* TipsViewModel.swift in Sources */,
 				C49300DF25C880A6003DD73C /* ImageDetailView.swift in Sources */,
 				C44AC13D25C08EDC0070B9E4 /* AppSideBarNavigation.swift in Sources */,
@@ -592,6 +600,7 @@
 				C4A14DC825C05B6D00532FD4 /* GalleryView.swift in Sources */,
 				C44AC16625C1EC270070B9E4 /* APIError.swift in Sources */,
 				C44AC19D25C3195B0070B9E4 /* DataAPIService.swift in Sources */,
+				C4D3B6E225CC4161005EBE93 /* TipView.swift in Sources */,
 				C44AC24E25C42F8C0070B9E4 /* TipsViewModel.swift in Sources */,
 				C49300E025C880A6003DD73C /* ImageDetailView.swift in Sources */,
 				C4A14DD125C05CE300532FD4 /* Navigation.swift in Sources */,
@@ -628,6 +637,7 @@
 				C44AC26825C434390070B9E4 /* ImageGalleryViewModelTests.swift in Sources */,
 				C44AC1C825C3280E0070B9E4 /* MockDataAPIService.swift in Sources */,
 				C44AC1D125C32A2D0070B9E4 /* MockImageAPIService.swift in Sources */,
+				C4D3B6E325CC4161005EBE93 /* TipView.swift in Sources */,
 				C4A14DB725C05B2B00532FD4 /* MapView.swift in Sources */,
 				C4A14DD225C05CE300532FD4 /* Navigation.swift in Sources */,
 				C44AC26225C430E60070B9E4 /* ImageGalleryViewModel.swift in Sources */,
