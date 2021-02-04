@@ -19,7 +19,21 @@ struct MapView: View {
                                            span: MKCoordinateSpan(latitudeDelta: 35, longitudeDelta: 35))
     
     var body: some View {
-        Text("MapView")
+        Map(coordinateRegion: $region, annotationItems: viewModel.places) { location in
+            MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)) {
+                /// We wrap each annotationContent inside a NavigationLink
+                /// So that when tapped it then links to that specific location
+                NavigationLink(destination: LocationView(with: location)) {
+                Image(location.country)
+                    .resizable()
+                    .cornerRadius(10)
+                    .frame(width: 80, height: 40)
+                    .shadow(radius: 3)
+                }
+            }
+        }
+        .edgesIgnoringSafeArea(.all)
+        .navigationBarHidden(true)
     }
 }
 

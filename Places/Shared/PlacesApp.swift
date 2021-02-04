@@ -12,7 +12,6 @@ struct PlacesApp: App {
     var body: some Scene {
         WindowGroup {
             Navigation()
-            //ContentView()
         }
     }
 }
