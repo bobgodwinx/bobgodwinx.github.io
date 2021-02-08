@@ -18,7 +18,8 @@ struct LocationView: View {
             Image(location.heroPicture)
                 .resizable()
                 .scaledToFit()
-                .padding(.bottom, 10)
+                .iOS { $0.padding(.bottom, 10) }
+                .macOS { $0.padding(.bottom, 10) }
             Text(location.name)
                 .font(.largeTitle)
                 .bold()
@@ -34,8 +35,15 @@ struct LocationView: View {
                 .padding(.top)
             Text(location.more)
                 .padding(.horizontal)
+            
+            Button("hello world", action: showSomething)
+                .buttonStyle(primaryButtonStyle())
         }
         .navigationTitle("Discover")
+    }
+    
+    func showSomething() {
+        print("Nothing to show")
     }
 }
 

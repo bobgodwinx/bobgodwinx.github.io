@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 public extension Optional {
     func unwrap(hint hintNote: @autoclosure () -> String? = nil,
@@ -21,5 +22,35 @@ public extension Optional {
             preconditionFailure(message)
         }
         return unwrapped
+    }
+}
+
+
+extension View {
+    func iOS<Content: View>(_ modifier: (Self) -> Content) -> some View {
+        #if os(iOS)
+        return modifier(self)
+        #else
+        return self
+        #endif
+    }
+    
+    func macOS<Content: View>(_ modifier: (Self) -> Content) -> some View {
+        #if os(macOS)
+        return modifier(self)
+        #else
+        return self
+        #endif
+    }
+}
+
+struct primaryButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration
+            .label
+            .padding()
+            .background(configuration.isPressed ? Color.blue.opacity(0.5) : Color.blue )
+            .foregroundColor(Color.white)
+            .clipShape(Capsule())
     }
 }
