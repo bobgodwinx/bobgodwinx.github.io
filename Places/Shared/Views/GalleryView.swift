@@ -16,6 +16,17 @@ extension Image {
     }
 }
 
+struct DestinationView: View  {
+    var locationImage: LocationImage
+    var body: some View {
+        NavigationLink(destination: ImageDetailView(image: locationImage.image)) {
+            locationImage
+                .image
+                .collectionImageModifier()
+        }
+    }
+}
+
 struct GalleryView: View {
     @ObservedObject var viewModel: ImageGalleryViewModel
     
@@ -23,22 +34,14 @@ struct GalleryView: View {
         self.viewModel = viewModel
     }
     
-    var colums = [
-        GridItem(spacing: 0),
-        GridItem(spacing: 0),
-        GridItem(spacing: 0)
-    ]
+    var colums =  [GridItem(.adaptive(minimum: 80, maximum: 100))]
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
             LazyVGrid(columns: colums) {
-                ForEach(viewModel.locationImages, id: \.id) { locationImage in
-                    NavigationLink(destination: ImageDetailView(image: locationImage.image)) {
-                        locationImage
-                            .image
-                            .collectionImageModifier()
-                    }
-                }
+                ForEach(viewModel.locationImages,
+                        id: \.hashValue,
+                        content: DestinationView.init)
             }
         }
         .navigationTitle(Text("Gallery"))

@@ -9,11 +9,16 @@
 import Foundation
 import SwiftUI
 
-struct LocationImage: Identifiable {
+struct LocationImage: Hashable {
     let id: UUID
     let image: Image
+    
     init(_ image: Image) {
         self.id = UUID()
         self.image = image
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self.id)
     }
 }

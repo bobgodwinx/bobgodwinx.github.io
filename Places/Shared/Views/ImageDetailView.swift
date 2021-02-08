@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct ImageDetailView: View {
+    
+    @Environment(\.presentationMode) var presentationMode
     let image: Image
-    var body: some View { image.collectionImageModifier() }
+    
+    var body: some View {
+        image
+            .collectionImageModifier()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .edgesIgnoringSafeArea(.all)
+            .onTapGesture { presentationMode.wrappedValue.dismiss() }
+    }
 }
 
 struct ImageDetailView_Previews: PreviewProvider {
