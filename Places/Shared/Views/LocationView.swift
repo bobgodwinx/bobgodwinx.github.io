@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LocationView: View {
+    @State var isPresented = false
     let location: Location
     
     init(with location: Location) {
@@ -20,6 +21,8 @@ struct LocationView: View {
                 .scaledToFit()
                 .iOS { $0.padding(.bottom, 10) }
                 .macOS { $0.padding(.bottom, 10) }
+                .popover(isPresented: $isPresented, content: locationImage)
+                .onTapGesture(perform: tapGesture)
             Text(location.name)
                 .font(.largeTitle)
                 .bold()
@@ -44,6 +47,14 @@ struct LocationView: View {
     
     func showSomething() {
         print("Nothing to show")
+    }
+    
+    func locationImage() -> some View {
+       ImageDetailView(image:  Image(location.heroPicture))
+    }
+    
+    func tapGesture() {
+        isPresented.toggle()
     }
 }
 
