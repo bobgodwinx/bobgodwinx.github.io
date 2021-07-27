@@ -78,6 +78,10 @@
 		C44AC26125C430E60070B9E4 /* ImageGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44AC25E25C430E60070B9E4 /* ImageGalleryViewModel.swift */; };
 		C44AC26225C430E60070B9E4 /* ImageGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44AC25E25C430E60070B9E4 /* ImageGalleryViewModel.swift */; };
 		C44AC26825C434390070B9E4 /* ImageGalleryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44AC26725C434390070B9E4 /* ImageGalleryViewModelTests.swift */; };
+		C490C563267281FF00FB56A4 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490C562267281FF00FB56A4 /* ImageDownloader.swift */; };
+		C490C564267281FF00FB56A4 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490C562267281FF00FB56A4 /* ImageDownloader.swift */; };
+		C490C565267281FF00FB56A4 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490C562267281FF00FB56A4 /* ImageDownloader.swift */; };
+		C490C566267281FF00FB56A4 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490C562267281FF00FB56A4 /* ImageDownloader.swift */; };
 		C49300DE25C880A6003DD73C /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49300DD25C880A6003DD73C /* ImageDetailView.swift */; };
 		C49300DF25C880A6003DD73C /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49300DD25C880A6003DD73C /* ImageDetailView.swift */; };
 		C49300E025C880A6003DD73C /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49300DD25C880A6003DD73C /* ImageDetailView.swift */; };
@@ -112,6 +116,8 @@
 		C4A14DD025C05CE300532FD4 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A14DCE25C05CE300532FD4 /* Navigation.swift */; };
 		C4A14DD125C05CE300532FD4 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A14DCE25C05CE300532FD4 /* Navigation.swift */; };
 		C4A14DD225C05CE300532FD4 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A14DCE25C05CE300532FD4 /* Navigation.swift */; };
+		C4D0292525F0D4FD00EA7B51 /* UACustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D0292425F0D4FD00EA7B51 /* UACustomEvent.m */; };
+		C4D0292625F0D4FD00EA7B51 /* UACustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D0292425F0D4FD00EA7B51 /* UACustomEvent.m */; };
 		C4D3B6E025CC4161005EBE93 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D3B6DF25CC4161005EBE93 /* TipView.swift */; };
 		C4D3B6E125CC4161005EBE93 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D3B6DF25CC4161005EBE93 /* TipView.swift */; };
 		C4D3B6E225CC4161005EBE93 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D3B6DF25CC4161005EBE93 /* TipView.swift */; };
@@ -156,6 +162,7 @@
 		C44AC25425C430110070B9E4 /* TipsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewModelTests.swift; sourceTree = "<group>"; };
 		C44AC25E25C430E60070B9E4 /* ImageGalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewModel.swift; sourceTree = "<group>"; };
 		C44AC26725C434390070B9E4 /* ImageGalleryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewModelTests.swift; sourceTree = "<group>"; };
+		C490C562267281FF00FB56A4 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		C49300DD25C880A6003DD73C /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
 		C4A14D5725C0579900532FD4 /* PlacesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesApp.swift; sourceTree = "<group>"; };
 		C4A14D5825C0579900532FD4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -177,6 +184,10 @@
 		C4A14DBC25C05B4E00532FD4 /* TipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
 		C4A14DC525C05B6D00532FD4 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		C4A14DCE25C05CE300532FD4 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		C4D0292125F0D4FD00EA7B51 /* Places (iOS)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Places (iOS)-Bridging-Header.h"; sourceTree = "<group>"; };
+		C4D0292225F0D4FD00EA7B51 /* Places (macOS)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Places (macOS)-Bridging-Header.h"; sourceTree = "<group>"; };
+		C4D0292325F0D4FD00EA7B51 /* UACustomEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UACustomEvent.h; sourceTree = "<group>"; };
+		C4D0292425F0D4FD00EA7B51 /* UACustomEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UACustomEvent.m; sourceTree = "<group>"; };
 		C4D3B6DF25CC4161005EBE93 /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -259,6 +270,7 @@
 				C44AC1DB25C32B1A0070B9E4 /* LocationsViewModel.swift */,
 				C44AC24B25C42F8C0070B9E4 /* TipsViewModel.swift */,
 				C44AC25E25C430E60070B9E4 /* ImageGalleryViewModel.swift */,
+				C490C562267281FF00FB56A4 /* ImageDownloader.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -288,6 +300,10 @@
 				C4A14D5825C0579900532FD4 /* ContentView.swift */,
 				C4A14D5925C0579B00532FD4 /* Assets.xcassets */,
 				C44AC1B525C326B20070B9E4 /* Mocks */,
+				C4D0292325F0D4FD00EA7B51 /* UACustomEvent.h */,
+				C4D0292425F0D4FD00EA7B51 /* UACustomEvent.m */,
+				C4D0292125F0D4FD00EA7B51 /* Places (iOS)-Bridging-Header.h */,
+				C4D0292225F0D4FD00EA7B51 /* Places (macOS)-Bridging-Header.h */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -448,9 +464,11 @@
 				TargetAttributes = {
 					C4A14D5D25C0579B00532FD4 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1240;
 					};
 					C4A14D6525C0579B00532FD4 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1240;
 					};
 					C4A14D6D25C0579B00532FD4 = {
 						CreatedOnToolsVersion = 12.3;
@@ -538,6 +556,7 @@
 				C44AC15725C1EBCF0070B9E4 /* Location.swift in Sources */,
 				C44AC17725C2083D0070B9E4 /* Endpoint.swift in Sources */,
 				C44AC1A425C31B110070B9E4 /* ImageAPIService.swift in Sources */,
+				C4D0292525F0D4FD00EA7B51 /* UACustomEvent.m in Sources */,
 				C44AC19B25C3195B0070B9E4 /* DataAPIService.swift in Sources */,
 				C4A14D8225C0579B00532FD4 /* ContentView.swift in Sources */,
 				C44AC1DC25C32B1B0070B9E4 /* LocationsViewModel.swift in Sources */,
@@ -548,6 +567,7 @@
 				C4A14DA725C05AE600532FD4 /* LocationView.swift in Sources */,
 				C49300DE25C880A6003DD73C /* ImageDetailView.swift in Sources */,
 				C4A14DB425C05B2B00532FD4 /* MapView.swift in Sources */,
+				C490C563267281FF00FB56A4 /* ImageDownloader.swift in Sources */,
 				C4A14D8025C0579B00532FD4 /* PlacesApp.swift in Sources */,
 				C4A14D9B25C0585800532FD4 /* AppTabNavigation.swift in Sources */,
 				C44AC16425C1EC270070B9E4 /* APIError.swift in Sources */,
@@ -561,9 +581,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C490C564267281FF00FB56A4 /* ImageDownloader.swift in Sources */,
 				C4A14DBE25C05B4E00532FD4 /* TipsView.swift in Sources */,
 				C44AC16E25C1EF1D0070B9E4 /* Tips.swift in Sources */,
 				C4A14DC725C05B6D00532FD4 /* GalleryView.swift in Sources */,
+				C4D0292625F0D4FD00EA7B51 /* UACustomEvent.m in Sources */,
 				C44AC26025C430E60070B9E4 /* ImageGalleryViewModel.swift in Sources */,
 				C44AC1CF25C32A2D0070B9E4 /* MockImageAPIService.swift in Sources */,
 				C4A14DD025C05CE300532FD4 /* Navigation.swift in Sources */,
@@ -599,6 +621,7 @@
 				C44AC1D025C32A2D0070B9E4 /* MockImageAPIService.swift in Sources */,
 				C4A14DC825C05B6D00532FD4 /* GalleryView.swift in Sources */,
 				C44AC16625C1EC270070B9E4 /* APIError.swift in Sources */,
+				C490C565267281FF00FB56A4 /* ImageDownloader.swift in Sources */,
 				C44AC19D25C3195B0070B9E4 /* DataAPIService.swift in Sources */,
 				C4D3B6E225CC4161005EBE93 /* TipView.swift in Sources */,
 				C44AC24E25C42F8C0070B9E4 /* TipsViewModel.swift in Sources */,
@@ -643,6 +666,7 @@
 				C44AC26225C430E60070B9E4 /* ImageGalleryViewModel.swift in Sources */,
 				C44AC19E25C3195B0070B9E4 /* DataAPIService.swift in Sources */,
 				C44AC1B025C31DDF0070B9E4 /* LocationImage.swift in Sources */,
+				C490C566267281FF00FB56A4 /* ImageDownloader.swift in Sources */,
 				C4A14DAA25C05AE600532FD4 /* LocationView.swift in Sources */,
 				C4A14DC925C05B6D00532FD4 /* GalleryView.swift in Sources */,
 				C44AC17A25C2083D0070B9E4 /* Endpoint.swift in Sources */,
@@ -719,6 +743,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -772,6 +797,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -784,6 +810,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FQSY778SP8;
 				ENABLE_PREVIEWS = YES;
@@ -796,6 +823,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bobgodwinx.Places;
 				PRODUCT_NAME = Places;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Shared/Places (iOS)-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -806,6 +835,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FQSY778SP8;
 				ENABLE_PREVIEWS = YES;
@@ -818,6 +848,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bobgodwinx.Places;
 				PRODUCT_NAME = Places;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Shared/Places (iOS)-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -829,6 +860,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
@@ -845,6 +877,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bobgodwinx.Places;
 				PRODUCT_NAME = Places;
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Shared/Places (macOS)-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -854,6 +888,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
@@ -870,6 +905,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bobgodwinx.Places;
 				PRODUCT_NAME = Places;
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Shared/Places (macOS)-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

@@ -43,6 +43,8 @@ struct LocationView: View {
                 .buttonStyle(primaryButtonStyle())
         }
         .navigationTitle("Discover")
+        .navigationBarTitleDisplayMode(.automatic)
+        Spacer()
     }
     
     func showSomething() {

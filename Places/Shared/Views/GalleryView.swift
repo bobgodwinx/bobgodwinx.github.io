@@ -12,7 +12,7 @@ extension Image {
         self
             .resizable()
             .aspectRatio(contentMode: .fit)
-            .clipped()
+            //.clipped()
     }
 }
 
@@ -23,6 +23,7 @@ struct DestinationView: View  {
             locationImage
                 .image
                 .collectionImageModifier()
+            Spacer()
         }
     }
 }

@@ -46,4 +46,12 @@ extension Location {
                  pictures: [],
                  images: [])
     }
+    
+    func calculate() {
+        let distance = 10 //infered as Int
+        let time = 2.5
+        let precisionSpeed = Double(distance) / time
+        let nonPrecisionSpeed = distance / Int(time)
+        print("precisionSpeed \(precisionSpeed) \n nonPrecisionSpeed \(nonPrecisionSpeed)")
+    }
 }
